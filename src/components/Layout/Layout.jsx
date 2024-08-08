@@ -1,7 +1,7 @@
 import React from "react";
-import {Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
-import Navbar from "../Navbar";
+import Navbar from "../Navbar/Navbar";
 
 function Layout({}) {
   return (
@@ -10,7 +10,9 @@ function Layout({}) {
         <Navbar />
       </div>
       <div className="px-36 py-4">
-        <main className="px-8 py-8"><Outlet/></main>
+        <main className="px-8 py-8">
+          <Outlet />
+        </main>
       </div>
     </div>
   );

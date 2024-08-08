@@ -1,41 +1,44 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+
+const items = [
+  {
+    name: "Home",
+    path: "/",
+    subItems: [
+      { name: "Placeholder", path: "/placeholder" },
+      { name: "Placeholder", path: "/placeholder" },
+    ],
+  },
+  {
+    name: "Store",
+    path: "/store",
+    subItems: [
+      { name: "Placeholder", path: "/placeholder" },
+      { name: "Placeholder", path: "/placeholder" },
+    ],
+  },
+  {
+    name: "Community",
+    path: "/placeholder",
+    subItems: [
+      { name: "Placeholder", path: "/placeholder" },
+      { name: "Placeholder", path: "/placeholder" },
+    ],
+  },
+  {
+    name: "About",
+    path: "/placeholder",
+    subItems: [],
+  },
+  {
+    name: "Support",
+    path: "/placeholder",
+    subItems: [],
+  },
+];
 function Navbar() {
-  const items = [
-    {
-      name: "Home",
-      path: "/",
-      subItems: [
-        { name: "Placeholder", path: "/placeholder" },
-        { name: "Placeholder", path: "/placeholder" },
-      ],
-    },
-    {
-      name: "Store",
-      path: "/store",
-      subItems: [
-        { name: "Placeholder", path: "/placeholder" },
-        { name: "Placeholder", path: "/placeholder" },
-      ],
-    },
-    {
-      name: "Community",
-      path: "/placeholder",
-      subItems: [
-        { name: "Placeholder", path: "/placeholder" },
-        { name: "Placeholder", path: "/placeholder" },
-      ],
-    },
-    {
-      name: "About",
-      path: "/placeholder",
-      subItems: [],
-    },
-    {
-      name: "Support",
-      path: "/placeholder",
-      subItems: [],
-    },
-  ];
+  const location = useLocation();
+  console.log(location);
 
   const navClass = ({ isActive }) =>
     isActive ? "text-blue-400 underline" : "";
